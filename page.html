@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>Login</title>
+    <!--[if IE 7]>
+        <link href="/web/Content/css/ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="/web/Content/css/cssBundles?v=vHU3xdJyX8R_MPwjziPwuotw8gvyfBnbMIhlFxvVqho1" rel="stylesheet"/>
+
+    <script src="/web/bundles/jquery?v=GvZyWCfoypD3QzVRQkTmpnCx5uQdJMNPY173yp9RMPc1"></script>
+
+    
+    <!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="/web/Scripts/selectivizr-min.js"></script>
+    <![endif]-->
+    
+    <link rel="SHORTCUT ICON" href="/web/Content/img/icon.png">
+</head>
+<body>
+    <div class="up01_2014">
+        <div class="header">
+
+
+
+<div class="top_bar"></div>
+<div class="center">
+    <div class="box_logo">
+
+        <a href="/web/login">
+            <img src="/web/Content/img/logo.png" alt="Logotipo" width="117" height="51" /></a>
+    </div>
+</div>
+<div id="divMenuSitesLug">
+</div>
+<script src="/web/scripts/pages/menuSites.js"></script>
+
+        </div>
+    </div>
+
+    <div id="main" class="login">
+        <div class="section center">
+            <h2><span class="sprite"></span>Login</h2>
+
+            <div class="conteudo">
+                <div id="boxes">
+                    <div id="layoutModal" class="window modal">
+                        <a class="close" href="javascript:">
+                            <img src="/web/Content/img/btn-fechar.png" width="24" height="25" alt="Fechar" /></a>
+                        <div>
+                            <h4 id="modalTitle"></h4>
+                            <div style="text-align: center;">
+                                <div id="modalContent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+<div class="box conta">
+
+    <h3>Entrar com a sua conta Level Up</h3>
+
+<form action="/web/login-auth" class="form-horizontal" method="post">        <fieldset>
+            <div class="entrar-conta">
+                <legend>Fazer o login</legend>
+
+                <div class="control-group">
+                    <label class="control-label">Login ou Email de cadastro</label>
+                    <div class="controls">
+                        <input class="input-largexx" data-val="true" data-val-required="Campo obrigatório" id="Username" maxlength="100" name="Username" type="text" value="" />
+                        <label class="erro"><span class="field-validation-valid" data-valmsg-for="Username" data-valmsg-replace="true"></span></label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Senha</label>
+                    <div class="controls">
+                        <input class="input-largexx" data-val="true" data-val-required="Campo obrigatório" id="Password" maxlength="24" name="Password" type="password" value="" />
+                        <label class="erro"><span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span></label>
+                    </div>
+                </div>
+                <label style="color: red;"></label>
+
+                <p class="aviso">Informe sua senha para continuar</p>
+
+                <div class="control-captcha">
+                                    </div>
+            </div>
+                                
+            <input type="submit" value="Entrar" class="btn" />
+
+        </fieldset>
+</form>    <ul>
+        <li class="first"><a href="/web/criar-conta"><span></span>Criar uma conta Level Up</a></li>
+        <li class=""><a href="/web/esqueci-senha-conta"><span></span>Esqueci minha senha</a></li>
+    </ul>
+</div>
+
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div id="myLoader" class="ajax-loader">
+        <div class="ajax-loader-content" style="margin-left: 42.6%;">
+            <center>
+                <p>Aguarde...</p>
+                <img src="/web/Content/img/ajax-loader200x200.gif" />
+            </center>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="section">
+            <img src="/web/Content/img/icn-site_seguro.png" alt="Site seguro" class="securesite" height="42" width="125" />
+            <p class="copyright">&copy; 2017, Level Up! Interactive S.A. TODOS OS DIREITOS RESERVADOS.</p>
+            <a href="http://centraldesuporte.levelup.com.br/" class="supportcenter" target="_blank">central de suporte</a>
+        </div>
+    </div>
+
+    <script src="/web/bundles/jqueryval?v=1WVkZk3xBF-VZ0FChtzHNzSgWdJDBj2-ll_nbt1DVgk1"></script>
+
+
+    
+    <script type="text/javascript">
+        $('#Username').alphanumeric({ ichars: "°¹²³£¢¬¨§ºª↕♂ó¤ƒÆ!#$%^&*()+=[]\\\';,/{}|\":<>?~` " });
+        
+        $(function() {
+            $('#Username').focus();
+        });
+    </script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</body>
+
+    <script type="text/javascript">
+        //var _mfq = _mfq || [];
+        //(function() {
+        //    var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
+        //    mf.src = "//cdn.mouseflow.com/projects/08017b9a-fe69-4a0e-9ad6-2dfb43d12948.js";
+        //    document.getElementsByTagName("head")[0].appendChild(mf);
+        //})();
+
+        function getQueryStringByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        function showLoader() {
+            var loader = document.getElementById('myLoader');
+            loader.style.display = "block";
+        }
+
+        function hideLoader() {
+            var loader = document.getElementById('myLoader');
+            loader.style.display = "none";
+        }
+
+
+        function closeModal() {
+            $('#mask').hide();
+            $('.window').hide();
+        }
+
+        function showSubscribeModal() {
+            $('#mask').hide();
+            $('.window').hide();
+            showModal('#lockaccountpassword');
+            $("#NewPassword").resize();
+        };
+
+        function showModalLayout(title, content, callback) {
+
+            if (title != null)
+                $("#modalTitle").html(title);
+
+            if (content != null)
+                $("#modalContent").html(content);
+
+            showModal("#layoutModal");
+            if (callback != null)
+                callback();
+
+        }
+
+        function hideModalLayout() {
+            $("#modalTitle").html("");
+            $("#modalContent").html("");
+            $("#layoutModal").hide();
+        }
+
+        function showModal(modalId) {
+
+            modalAviso(modalId);
+
+            $('.window .close').click(function() {
+                closeModal();
+            });
+            $('#mask').click(function() {
+                $(this).hide();
+                $('.window').hide();
+            });
+
+            function modalAviso(id) {
+                var maskHeight = $(document).height();
+                var maskWidth = $(window).width();
+                $('#mask').css({ 'width': maskWidth, 'height': maskHeight });
+                $('#mask').fadeIn(1000);
+                $('#mask').fadeTo("slow", 0.8);
+                $(id).fadeIn(1000);
+            }
+        };
+
+        function showModalLarge(modalId) {
+
+            modalAviso(modalId);
+
+            $('.window .close').click(function() {
+                closeModal();
+            });
+            $('#mask').click(function() {
+                $(this).hide();
+                $('.window').hide();
+            });
+
+            function modalAviso(id) {
+                var maskHeight = $(document).height();
+                var maskWidth = $(window).width();
+                $('#mask').css({ 'width': maskWidth, 'height': maskHeight });
+                $('#mask').fadeIn(100);
+                $('#mask').fadeTo("slow", 0.8);
+                $(id).fadeIn(100);
+            }
+        };
+
+        $(document).ready(function() {
+
+            $('.date').mask('00/00/0000');
+            $('.time').mask('00:00:00');
+            $('.date_time').mask('00/00/0000 00:00:00');
+            $('.cep').mask('00000-000');
+            $('.phone').mask('0000-0000');
+            $('.phone_with_ddd').mask('(00) 0000-0000');
+            $('.phone_us').mask('(000) 000-0000');
+            $('.mixed').mask('AAA 000-S0S');
+            $('.cpf').mask('000.000.000-00', { reverse: true });
+            $('.cnpj').mask('00.000.000/0000-00', { reverse: true });
+            $('.money').mask('000.000.000.000.000,00', { reverse: true });
+            $('.money2').mask("#.##0,00", { reverse: true });
+            $('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+                translation: {
+                    'Z': {
+                        pattern: /[0-9]/,
+                        optional: true
+                    }
+                }
+            });
+            $('.ip_address').mask('099.099.099.099');
+            $('.percent').mask('##0,00%', { reverse: true });
+            $('.clear-if-not-match').mask("00/00/0000", { clearIfNotMatch: true });
+            $('.placeholder').mask("00/00/0000", { placeholder: "__/__/____" });
+            $('.fallback').mask("00r00r0000", {
+                translation: {
+                    'r': {
+                        pattern: /[\/]/,
+                        fallback: '/'
+                    },
+                    placeholder: "__/__/____"
+                }
+            });
+            $('.selectonfocus').mask("00/00/0000", { selectOnFocus: true });
+        });
+
+        function footerPosition() {
+
+            var heightFull = $('.header').height() + $('#main').height() + $('#footer').height() + 80;
+
+            if (heightFull < $(window).height()) {
+                $('#footer').css({
+                    position: 'fixed',
+                    bottom: 0
+                });
+            } else {
+                $('#footer').css({
+                    position: 'relative',
+                    bottom: 'auto'
+                });
+            }
+        }
+
+        $(document).ready(function() {
+            footerPosition();
+        });
+
+        $(window).resize(function() {
+            footerPosition();
+        });
+
+    </script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-32392850-15', 'auto');
+        ga('create', 'UA-299779-1', 'auto', { 'name': 'LevelGeral' }); //tracking para a Level Up geral
+        ga('send', 'pageview');
+        ga('LevelGeral.send', 'pageview'); //manda o tracking para Level Up Geral
+
+    </script>
+
+</html>
